@@ -49,11 +49,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if class_name not in self.modules:
+        if class_name not in HBNBCommand.modules:
             print("** class doesn't exist **")
             return
 
-        obj = self.modules[class_name]()
+        obj = HBNBCommand.modules[class_name]
         obj.save()
         print(obj.id)
 
@@ -63,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if argv[0] not in self.modules:
+        if argv[0] not in HBNBCommand.modules:
             print("** class doesn't exist **")
             return
 
@@ -137,13 +137,13 @@ class HBNBCommand(cmd.Cmd):
                 print(str(obj))
 
         else:
-            if class_name not in self.modules:
+            if class_name not in HBNBCommand.modules:
                 print("** class doesn't exist **")
                 return
 
             instances = []
             for obj in objects.values():
-                for class_n in self.modules.values():
+                for class_n in HBNBCommand.modules.values():
                     if isinstance(obj, class_n):
                         instances.append(str(obj))
 
