@@ -34,11 +34,15 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if class_name != BaseModel.__name__:
+        if class_name != BaseModel.__name__ and class_name != User.__name__:
             print("** class doesn't exist **")
             return
 
-        obj = BaseModel()
+        if class_name == BaseModel.__name__:
+            obj = BaseModel()
+        elif class_name == User.__name__:
+            obj = User()
+
         obj.save()
         print(obj.id)
 
@@ -48,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if argv[0] != BaseModel.__name__:
+        if argv[0] != BaseModel.__name__ and argv[0] != User.__name__:
             print("** class doesn't exist **")
             return
 
@@ -122,7 +126,8 @@ class HBNBCommand(cmd.Cmd):
                 print(str(obj))
 
         else:
-            if class_name != BaseModel.__name__:
+            if class_name != BaseModel.__name__ and \
+                    class_name != User.__name__:
                 print("** class doesn't exist **")
                 return
 

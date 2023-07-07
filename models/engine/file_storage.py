@@ -44,10 +44,15 @@ class FileStorage:
     def reload(self):
         """Deserializes the JSON file to __objects if it exists"""
         from models import base_model
+        from models import user
 
         if os.path.exists(self.__file_path):
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 for attr, value in json.load(f).items():
-                    cls = getattr(base_model, value["__class__"])
+                    if value["__class__"] == base_model.BaseModel.__name__:
+                        cls = getattr(base_model, value["__class__"])
+                    elif value["__class__"] == user.User.__name__:
+                        cls = getattr(user, value["__class__"])
+
                     obj = cls(**value)
                     self.__objects[attr] = obj
