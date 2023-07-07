@@ -5,12 +5,26 @@
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
     """Defines the HBNBCommand class"""
     prompt = "(hbnb) "
+    modules = {
+        "BaseModel": BaseModel,
+        "User": User,
+        "State": State,
+        "City": City,
+        "Amenity": Amenity,
+        "Place": Place,
+        "Review": Review
+    }
 
     def do_quit(self, arg):
         """Command to exit the program"""
@@ -35,15 +49,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if class_name != BaseModel.__name__ and class_name != User.__name__:
+        if class_name not in self.modules:
             print("** class doesn't exist **")
             return
 
-        if class_name == BaseModel.__name__:
-            obj = BaseModel()
-        elif class_name == User.__name__:
-            obj = User()
-
+        obj = self.modules[class_name]()
         obj.save()
         print(obj.id)
 
@@ -53,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        if argv[0] != BaseModel.__name__ and argv[0] != User.__name__:
+        if argv[0] not in self.modules:
             print("** class doesn't exist **")
             return
 
@@ -109,7 +119,7 @@ class HBNBCommand(cmd.Cmd):
             obj = str(my_class) + "." + str(my_id)
             objects = storage.all()
 
-            del(objects[obj])
+            del objects[obj]
             storage.save()
 
     def do_all(self, class_name):
@@ -127,15 +137,15 @@ class HBNBCommand(cmd.Cmd):
                 print(str(obj))
 
         else:
-            if class_name != BaseModel.__name__ and \
-                    class_name != User.__name__:
+            if class_name not in self.modules:
                 print("** class doesn't exist **")
                 return
 
             instances = []
             for obj in objects.values():
-                if isinstance(obj, BaseModel):
-                    instances.append(str(obj))
+                for class_n in self.modules.values():
+                    if isinstance(obj, class_n):
+                        instances.append(str(obj))
 
             print(instances)
 
@@ -169,6 +179,7 @@ class HBNBCommand(cmd.Cmd):
 
         setattr(objects[obj], attr, value)
         storage.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
