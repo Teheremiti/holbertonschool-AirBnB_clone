@@ -53,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
 
-        obj = HBNBCommand.modules[class_name]
+        obj = HBNBCommand.modules[class_name]()
         obj.save()
         print(obj.id)
 
