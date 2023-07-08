@@ -54,8 +54,10 @@ Here is a brief overview of the modules in this repository:
  - [models/place.py](https://github.com/Teheremiti/holbertonschool-AirBnB_clone/blob/master/models/place.py) : Defines the Place class
  - [models/review.py](https://github.com/Teheremiti/holbertonschool-AirBnB_clone/blob/master/models/review.py) : Defines the Review class
 <br>
+
  - [models/engine/file_storage.py](https://github.com/Teheremiti/holbertonschool-AirBnB_clone/blob/master/models/engine/file_storage.py) : Contains the FileStorage class. This is the only class in the repository that does not inherit from BaseModel. It keeps memory of all the objects and the actions taken on them.
 <br>
+
  - [tests](https://github.com/Teheremiti/holbertonschool-AirBnB_clone/tree/master/tests) : This folder contains all the test modules that were realized to ensure the console works correctly
 
 ## Testing
