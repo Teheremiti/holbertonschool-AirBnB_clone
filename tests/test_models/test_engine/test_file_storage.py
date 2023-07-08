@@ -22,14 +22,14 @@ class TestFileStorage(unittest.TestCase):
 
     def test_all(self):
         """Test all method"""
-        self.assertEqual(dict, type(storage.all))
+        self.assertEqual(dict, type(storage.all()))
 
     def test_new(self):
         """Test new method"""
         base = BaseModel()
         storage.new(base)
-        self.assertIn("BaseModel." + base1.id, models.storage.all().keys())
-        self.assertIn(base1, models.storage.all().values())
+        self.assertIn("BaseModel." + base.id, storage.all().keys())
+        self.assertIn(base, storage.all().values())
 
     def test_save(self):
         """Test save method"""

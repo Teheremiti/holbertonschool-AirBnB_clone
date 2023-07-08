@@ -24,13 +24,13 @@ class TestUser(unittest.TestCase):
         self.assertEqual(user.email, "rick.sanchez@mail.com")
         self.assertEqual(user.first_name, "Rick")
         self.assertEqual(user.last_name, "Sanchez")
-        self.assertEquel(user.password, "pickle")
+        self.assertEqual(user.password, "pickle")
 
     def test_attributes_types(self):
         self.assertEqual(str, type(User.email))
         self.assertEqual(str, type(User.first_name))
         self.assertEqual(str, type(User.last_name))
-        self.assertEquel(str, type(User.password))
+        self.assertEqual(str, type(User.password))
 
     def test_subclass(self):
         self.assertTrue(issubclass(User, BaseModel))

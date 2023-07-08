@@ -18,7 +18,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(place.description, "")
         self.assertEqual(place.number_rooms, 0)
         self.assertEqual(place.number_bathrooms, 0)
-        self.assertEqual(place.max_guests, 0)
+        self.assertEqual(place.max_guest, 0)
         self.assertEqual(place.price_by_night, 0)
         self.assertEqual(place.latitude, 0.0)
         self.assertEqual(place.longitude, 0.0)
