@@ -6,7 +6,7 @@ import unittest
 from models.amenity import Amenity
 
 
-class TestAmenity(self):
+class TestAmenity(unittest.TestCase):
     """Amenity unittests"""
 
     def test_attributes(self):
