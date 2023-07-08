@@ -38,6 +38,10 @@ Run `help` to see the list of existing commands , and `help` followed by a comma
 			class_name (str): Name of the class to create
 			an instance of
 
+   		(hbnb) 
+
+Once you're done, you can run `quit` to exit the console :
+
 		(hbnb) quit
 		AirBnB_clone$
 
