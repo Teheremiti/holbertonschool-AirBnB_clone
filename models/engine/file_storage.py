@@ -64,8 +64,9 @@ class FileStorage:
         if os.path.exists(self.__file_path):
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 for attr, value in json.load(f).items():
-                    if cls in modules:
-                        cls = getattr(modules[cls], value["__class__"])
+                    class_name = value["__class__"]
+                    if class_name in modules:
+                        cls = getattr(modules[class_name], class_name)
 
                     obj = cls(**value)
                     self.__objects[attr] = obj
