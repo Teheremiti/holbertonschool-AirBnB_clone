@@ -15,7 +15,7 @@ class TestBaseModel(unittest.TestCase):
     def test_id(self):
         """Test the id attribute"""
         base = BaseModel()
-        self.assertEqual(type(base.id, str))
+        self.assertEqual(str, type(base.id))
 
     def test_created_at(self):
         """Test created_at attribute"""
