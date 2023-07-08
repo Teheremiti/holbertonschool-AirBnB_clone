@@ -34,7 +34,6 @@ class BaseModel:
                 if attr != "__class__":
                     setattr(self, attr, value)
 
-
     def __str__(self):
         """Overwrites the __str__ method"""
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id,
