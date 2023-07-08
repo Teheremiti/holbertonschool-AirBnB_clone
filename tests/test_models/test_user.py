@@ -34,3 +34,7 @@ class TestUser(unittest.TestCase):
 
     def test_subclass(self):
         self.assertTrue(issubclass(User, BaseModel))
+
+
+    if __name__ == '__main__':
+        unittest.main()
