@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>AirBnB clone</title>
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/6-filters.css">
+    <link rel="stylesheet" href="styles/8-places.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+
+        <!-- Filters section -->
+        <section class="filters">
+
+            <!-- Locations div -->
+            <div class="locations">
+                <h3>States</h3>
+                <h4>California, Arizona...</h4>
+                <div class="popover">
+                    <ul>
+                        <li>
+                            <h2>Arizona</h2>
+                            <ul>
+                                <li>Chandler</li>
+                                <li>Gilbert</li>
+                                <li>Mesa</li>
+                                <li>Phoenix</li>
+                                <li>Tucson</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>California</h2>
+                            <ul>
+                                <li>Fresno</li>
+                                <li>Los Angeles</li>
+                                <li>San Diego</li>
+                                <li>San Jose</li>
+                                <li>San Francisco</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Amenities div -->
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <h4>Internet, Kitchen...</h4>
+                <div class="popover">
+                    <ul>
+                        <li>WiFi</li>
+                        <li>TV</li>
+                        <li>Kitchen</li>
+                        <li>AC</li>
+                        <li>Heating</li>
+                        <li>Bathtub</li>
+                        <li>Washing machine</li>
+                        <li>Dryer</li>
+                        <li>Iron</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button>Search</button>
+        </section>
+
+        <!-- Places section -->
+        <section class="places">
+            <h1>Places</h1>
+            <article>
+                <div class="post_title">
+                    <h2>Suite • Casa Glenn (Fresno)</h2>
+                    <div class="price_by_night">$79</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">3 Guests</div>
+                    <div class="number_rooms">1 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div>
+                <div class="user"><strong>Owner: Glenn</strong></div>
+                <div class="description">
+                    <p>Centrally located in Fresno. The entire north side of our home is yours with a separate entrance
+                        so you can come and go as you please. Self check-in and out. Includes large space with a living,
+                        dining & sleep area, plus private bathroom.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="post_title">
+                    <h2>Hosts House (San Jose)</h2>
+                    <div class="price_by_night">$62</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">1 Guest</div>
+                    <div class="number_rooms">1 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div>
+                <div class="user"><strong>Owner: Henry</strong></div>
+                <div class="description">
+                    <p>Private entrance studio with in-unit bathroom and wet bar, it is located near downtown San Jose
+                        and Japantown. 2 min walk to the light rail station (japantown ayer green/blue lines), great for
+                        someone traveling or on a business trip. Few minutes drive to Target, Trader Joe, grocery
+                        stores, San Pedro Square. This studio unit is converted from the attic of detached garage
+                        structure
+                        with excellent privacy (1st floor is used as storage).
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="post_title">
+                    <h2>Private Loft (Los Angeles)</h2>
+                    <div class="price_by_night">$124</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">4 Guests</div>
+                    <div class="number_rooms">2 Bedrooms</div>
+                    <div class="number_bathrooms">2 Bathrooms</div>
+                </div>
+                <div class="user"><strong>Owner: Mieko</strong></div>
+                <div class="description">
+                    <p>Our fully remodeled modern apartment of the upstairs comes with two bedroom and one bathroom.
+                        Everything in the interior is recently renovated and furnished. Brand new kitchen & bathroom,
+                        dining and living room. Key-less entry on the front door and lock on each bedroom door,
+                        free wi-fi, washer/dryer. Cozy and breezy 😊 Short drive to LAX, beaches, SoFi Stadium &
+                        shopping. Walking distance to South Bay Galleria and restaurants. Great for family, couples,
+                        adventurers, and business travelers.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="post_title">
+                    <h2>Maryland Farm (Phoenix)</h2>
+                    <div class="price_by_night">$142</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">6 Guests</div>
+                    <div class="number_rooms">3 Bedrooms</div>
+                    <div class="number_bathrooms">2 Bathrooms</div>
+                </div>
+                <div class="user"><strong>Owner: David</strong></div>
+                <div class="description">
+                    <p>Charming home in a nice area. Two bathrooms, one was converted to a fully handicapped accessible
+                        master bath. Located in Central Phoenix near AZ-51 & I-17 freeways. It is just about ideal for
+                        access to all areas of the Phoenix Metropolitan Area.
+                    </p>
+                    <p>The house is equipped with a full kitchen, and all the comforts of your own home. We also have
+                        high speed wireless Internet, a smart TV with apps, and HDMI cables for any of your devices.
+                        Netflix and Amazon are all subscribed and setup.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div class="post_title">
+                    <h2>Catalina Lodge (Tucson)</h2>
+                    <div class="price_by_night">$103</div>
+                </div>
+                <div class="information">
+                    <div class="max_guest">2 Guests</div>
+                    <div class="number_rooms">1 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div>
+                <div class="user"><strong>Owner: Mark</strong></div>
+                <div class="description">
+                    <p>Enjoy some peace and tranquility in this beautiful casita with spectacular mountain views.
+                        Situated on the hill on 5 acres is this Very special quaint little house. It's like you're
+                        walking back in time with all of the modern amenities.
+                        Access to a beautiful pool. Two private patios To enjoy having some coffee or dining alfresco.
+                        If you are looking for a party house, this is not the place for you.
+                        The fireplace is decorative only.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>Holberton School</footer>
+</body>
+
+</html>
