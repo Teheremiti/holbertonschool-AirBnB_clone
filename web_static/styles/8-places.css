@@ -31,7 +31,6 @@
 
 .places article .post_title {
     display: flex;
-    flex: wrap row;
 }
 
 .places .price_by_night {
